@@ -1,0 +1,11 @@
+FLUSH  PRIVILEGES;   # 刷新
+GRANT ALL PRIVILEGES ON *.* TO 'pi'@'%' WITH GRANT OPTION;  #远程登录
+UPDATE user set host='%' where user='pi';   #设置用户可以在任意IP地址登陆
+CREATE USER 'pi'@'%' IDENTIFIED BY 'qwe123';   #创建一个pi的用户
+exit;  #退出数据库
+USE qb;  #进入qb 数据库
+SHOW DATABASE ; #显示所有数据库
+SHOW TABLES;   #显示所有的表
+SELECT * FROM  tablename;
+bash$  sudo systemctl restart  mysql ;  #重启数据库
+bash$  mysql -u root -p  ;# 登陆数据库
